@@ -23,6 +23,7 @@
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutAnimation="@anim/scale_up_layout_anim"
         android:orientation="vertical"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
