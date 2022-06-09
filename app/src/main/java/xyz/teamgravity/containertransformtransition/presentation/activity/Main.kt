@@ -1,12 +1,18 @@
 package xyz.teamgravity.containertransformtransition.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import xyz.teamgravity.containertransformtransition.R
+import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
+import xyz.teamgravity.containertransformtransition.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class Main : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
