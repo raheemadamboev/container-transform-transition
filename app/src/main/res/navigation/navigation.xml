@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/albumList">
+
+    <fragment
+        android:id="@+id/albumList"
+        android:name="xyz.teamgravity.containertransformtransition.presentation.fragment.AlbumList"
+        android:label="fragment_album_list"
+        tools:layout="@layout/fragment_album_list">
+        <action
+            android:id="@+id/action_albumList_to_album"
+            app:destination="@id/album" />
+    </fragment>
+    <fragment
+        android:id="@+id/album"
+        android:name="xyz.teamgravity.containertransformtransition.presentation.fragment.Album"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album" >
+        <argument
+            android:name="album"
+            app:argType="xyz.teamgravity.containertransformtransition.data.model.AlbumModel" />
+    </fragment>
+</navigation>
