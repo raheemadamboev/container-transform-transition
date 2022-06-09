@@ -1,6 +1,7 @@
 package xyz.teamgravity.containertransformtransition.presentation.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -20,7 +21,7 @@ class AlbumAdapter(
             binding.root.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    listener?.onAlbumClick(getItem(position))
+                    listener?.onAlbumClick(getItem(position), binding.imageI)
                 }
             }
         }
@@ -53,6 +54,6 @@ class AlbumAdapter(
     }
 
     interface AlbumListener {
-        fun onAlbumClick(album: AlbumModel)
+        fun onAlbumClick(album: AlbumModel, view: View)
     }
 }

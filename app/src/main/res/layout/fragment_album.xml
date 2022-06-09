@@ -38,6 +38,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
+                android:transitionName="@string/animation_image_shared_element"
                 tools:src="@drawable/ronaldo" />
 
             <com.google.android.material.textview.MaterialTextView

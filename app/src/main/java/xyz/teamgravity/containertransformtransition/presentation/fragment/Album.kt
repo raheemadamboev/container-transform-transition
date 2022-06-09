@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.transition.MaterialContainerTransform
 import xyz.teamgravity.containertransformtransition.databinding.FragmentAlbumBinding
 
 class Album : Fragment() {
@@ -15,6 +16,11 @@ class Album : Fragment() {
     private val binding get() = _binding!!
 
     private val args by navArgs<AlbumArgs>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedElementEnterTransition = MaterialContainerTransform()
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentAlbumBinding.inflate(inflater, container, false)
