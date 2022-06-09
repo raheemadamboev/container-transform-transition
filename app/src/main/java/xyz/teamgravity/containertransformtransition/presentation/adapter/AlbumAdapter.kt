@@ -10,8 +10,9 @@ import xyz.teamgravity.containertransformtransition.databinding.CardAlbumBinding
 
 class AlbumAdapter(
     diff: AlbumDiff,
-    private val listener: AlbumListener,
 ) : ListAdapter<AlbumModel, AlbumAdapter.AlbumViewHolder>(diff) {
+
+    var listener: AlbumListener? = null
 
     inner class AlbumViewHolder(private val binding: CardAlbumBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -19,7 +20,7 @@ class AlbumAdapter(
             binding.root.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    listener.onAlbumClick(getItem(position))
+                    listener?.onAlbumClick(getItem(position))
                 }
             }
         }
