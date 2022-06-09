@@ -26,7 +26,7 @@
             android:scaleType="centerCrop"
             tools:src="@drawable/ronaldo" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/artist_t"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             tools:text="Cristiano Ronaldo" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/album_t"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
