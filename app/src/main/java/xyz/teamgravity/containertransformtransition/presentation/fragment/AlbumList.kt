@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import xyz.teamgravity.containertransformtransition.R
-import xyz.teamgravity.containertransformtransition.core.Const
+import xyz.teamgravity.containertransformtransition.core.constant.Const
 import xyz.teamgravity.containertransformtransition.core.extension.navigateSafely
 import xyz.teamgravity.containertransformtransition.data.model.AlbumModel
 import xyz.teamgravity.containertransformtransition.databinding.FragmentAlbumListBinding

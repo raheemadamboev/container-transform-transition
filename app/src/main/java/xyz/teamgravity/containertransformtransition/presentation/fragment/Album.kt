@@ -5,14 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.color.MaterialColors
 import com.google.android.material.transition.MaterialContainerTransform
 import xyz.teamgravity.containertransformtransition.R
-import xyz.teamgravity.containertransformtransition.core.Const
+import xyz.teamgravity.containertransformtransition.core.constant.Const
 import xyz.teamgravity.containertransformtransition.databinding.FragmentAlbumBinding
 
 class Album : Fragment() {

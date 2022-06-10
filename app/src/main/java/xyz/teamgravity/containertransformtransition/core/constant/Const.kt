@@ -1,4 +1,4 @@
-package xyz.teamgravity.containertransformtransition.core
+package xyz.teamgravity.containertransformtransition.core.constant
 
 object Const {
 
