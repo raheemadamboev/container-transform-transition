@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import xyz.teamgravity.containertransformtransition.R
 import xyz.teamgravity.containertransformtransition.data.model.AlbumModel
 import xyz.teamgravity.containertransformtransition.databinding.CardAlbumBinding
 
@@ -28,6 +29,7 @@ class AlbumAdapter(
 
         fun bind(model: AlbumModel) {
             binding.apply {
+                root.transitionName = root.context.getString(R.string.animation_album_card, model.id.toString())
                 imageI.setImageResource(model.cover)
                 artistT.text = model.artist
                 albumT.text = model.album

@@ -4,6 +4,7 @@
     <!-- AlbumList -->
     <string name="albums">Best albums ever sold</string>
 
-    <!-- Misc -->
-    <string name="animation_image_shared_element">shared_element_container</string>
+    <!-- Animations -->
+    <string name="animation_album_card">album card %1$s</string>
+    <string name="animation_album">album</string>
 </resources>
