@@ -21,7 +21,7 @@ class AlbumAdapter(
             binding.root.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    listener?.onAlbumClick(getItem(position), binding.imageI)
+                    listener?.onAlbumClick(getItem(position), binding.root)
                 }
             }
         }

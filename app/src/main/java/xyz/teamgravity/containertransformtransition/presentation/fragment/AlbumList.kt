@@ -9,13 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.transition.MaterialElevationScale
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import xyz.teamgravity.containertransformtransition.R
 import xyz.teamgravity.containertransformtransition.core.extension.navigateSafely
 import xyz.teamgravity.containertransformtransition.data.model.AlbumModel
 import xyz.teamgravity.containertransformtransition.databinding.FragmentAlbumListBinding
@@ -33,12 +30,6 @@ class AlbumList : Fragment(), AlbumAdapter.AlbumListener {
 
     @Inject
     lateinit var adapter: AlbumAdapter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        exitTransition = MaterialElevationScale(false)
-        reenterTransition = MaterialElevationScale(true)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAlbumListBinding.inflate(inflater, container, false)
@@ -75,8 +66,7 @@ class AlbumList : Fragment(), AlbumAdapter.AlbumListener {
     }
 
     override fun onAlbumClick(album: AlbumModel, view: View) {
-        val extras = FragmentNavigatorExtras(view to getString(R.string.animation_image_shared_element))
-        findNavController().navigateSafely(AlbumListDirections.actionAlbumListToAlbum(album = album), navExtras = extras)
+        findNavController().navigateSafely(AlbumListDirections.actionAlbumListToAlbum(album = album))
     }
 
     override fun onDestroyView() {
